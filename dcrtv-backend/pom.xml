@@ -20,6 +20,10 @@
     <spring-cloud.version>2025.0.0</spring-cloud.version>
   </properties>
 
+  <modules>
+    <module>dcrtv-user</module>
+  </modules>
+
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
