@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
@@ -8,10 +9,11 @@
   <artifactId>dcrtv-backend</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>
+  <modules>
+    <module>user-service</module>
+  </modules>
 
   <name>dcrtv-backend</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -21,8 +23,8 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.3.4</version> <!-- Spring Boot 版本需与 Cloud 兼容 -->
-    <relativePath/>
+    <version>3.5.7</version>
+    <relativePath />
   </parent>
 
   <!-- Spring Cloud 版本管理 -->
