@@ -61,8 +61,11 @@
         <dependency>
             <groupId>com.dcrtv.dcrtvbackend</groupId>
             <artifactId>common</artifactId>
-            <version>1.0.0</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.dcrtv.dcrtvbackend</groupId>
+            <artifactId>common</artifactId>
         </dependency>
     </dependencies>
 
