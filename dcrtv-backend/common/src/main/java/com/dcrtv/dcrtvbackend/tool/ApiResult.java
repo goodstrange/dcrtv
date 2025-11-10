@@ -1,6 +1,10 @@
 package com.dcrtv.dcrtvbackend.tool;
 
-
+/**
+ * 统一回复类型
+ *
+ * @param <T>
+ */
 public class ApiResult<T> {
     private boolean result;
     private String message;
@@ -10,6 +14,15 @@ public class ApiResult<T> {
         this.result = result;
         this.message = message;
         this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        return "ApiResult{" +
+                "result=" + result +
+                ", message='" + message + '\'' +
+                ", data=" + data +
+                '}';
     }
 
     public boolean isResult() {
@@ -37,20 +50,20 @@ public class ApiResult<T> {
     }
 
 
-    public static ApiResult success(String message){
-        return new ApiResult(true,message,null);
+    public static ApiResult success(String message) {
+        return new ApiResult(true, message, null);
     }
 
-    public static <T> ApiResult<T> success(String message,T data){
-        return new ApiResult<T>(true,message,data);
+    public static <T> ApiResult<T> success(String message, T data) {
+        return new ApiResult<T>(true, message, data);
     }
 
-    public static ApiResult error(String message){
-        return new ApiResult(false,message,null);
+    public static ApiResult error(String message) {
+        return new ApiResult(false, message, null);
     }
 
-    public static <T> ApiResult<T> error(String message,T data){
-        return new ApiResult<T>(false,message,data);
+    public static <T> ApiResult<T> error(String message, T data) {
+        return new ApiResult<T>(false, message, data);
     }
 }
 

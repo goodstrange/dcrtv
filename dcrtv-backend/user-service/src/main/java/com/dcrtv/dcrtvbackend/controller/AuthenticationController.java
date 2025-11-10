@@ -1,10 +1,16 @@
 package com.dcrtv.dcrtvbackend.controller;
 
+import com.dcrtv.dcrtvbackend.service.VerifyCodeSend;
+import com.dcrtv.dcrtvbackend.service.impl.VerifyCodeSendImpl;
+import com.dcrtv.dcrtvbackend.tool.ApiResult;
+import jakarta.validation.constraints.NotBlank;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@Validated
 @RequestMapping("/user")
 public class AuthenticationController {
 
@@ -14,8 +20,10 @@ public class AuthenticationController {
     }
 
     @GetMapping("/code/send")
-    public String code(String number) {
-        return "Service is running";
+    public ApiResult code(@NotBlank(message = "手机号或邮箱不能为空") String number) {
+        VerifyCodeSend verifyCodeSend = new VerifyCodeSendImpl();
+        ApiResult code = verifyCodeSend.code(number);
+        return code;
     }
 
     @GetMapping("/register")
