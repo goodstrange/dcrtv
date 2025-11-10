@@ -19,7 +19,11 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring-cloud.version>2025.0.0</spring-cloud.version>
+<<<<<<< HEAD
+    <common.version>1.0-SNAPSHOT</common.version>
+=======
     <lombok.version>1.18.30</lombok.version>
+>>>>>>> 5bb00499a4def496bc9b2163de052466fbfc0184
   </properties>
 
 
@@ -30,9 +34,9 @@
     <relativePath />
   </parent>
 
-  <!-- Spring Cloud 版本管理 -->
   <dependencyManagement>
     <dependencies>
+      <!-- Spring Cloud 版本管理 -->
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies</artifactId>
@@ -40,6 +44,11 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+      <!-- common 模块声明 -->
+      <dependency>
+        <groupId>com.dcrtv.dcrtvbackend</groupId>
+        <artifactId>common</artifactId>
+        <version>${common.version}</version>
 
       <!-- Lombok 依赖 -->
       <dependency>
