@@ -18,7 +18,7 @@ public class WebExceptionHandler {
      */
     @ExceptionHandler(Exception.class)
     public ApiResult exceptionHandler(Exception e, HttpServletRequest request){
-        log.error("请求异常: URL={}, 异常类型={}, 异常信息={}", request.getRequestURL(), e.getClass().getSimpleName(), e.getMessage(), e);
-        return ApiResult.error("服务器异常");
+        log.error("请求异常: URL={}, 异常类型={}, 异常信息={}", request.getRequestURL(), e.getClass().getSimpleName(), e.getMessage());
+        return ApiResult.error(e.getMessage());
     }
 }

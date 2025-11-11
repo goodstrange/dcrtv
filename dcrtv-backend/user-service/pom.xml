@@ -63,10 +63,6 @@
             <artifactId>common</artifactId>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>com.dcrtv.dcrtvbackend</groupId>
-            <artifactId>common</artifactId>
-        </dependency>
     </dependencies>
 
     <build>

@@ -14,7 +14,7 @@ class VerifyCodeSendTest {
 
     @Test
     void testCodeSend() {
-        ApiResult result = verifyCodeSend.code("18890612345");
+        ApiResult result = verifyCodeSend.code("18898157061");
         System.out.println("测试结果: " + result);
     }
 }
