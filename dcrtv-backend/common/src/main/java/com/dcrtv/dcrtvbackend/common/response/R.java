@@ -23,4 +23,15 @@ public record R<T>(Integer code, String message, T data) {
     public static <T> R<T> success(RCodeMsgEnum rCodeMsgEnum, T data) {
         return new R<>(rCodeMsgEnum.getCode(), rCodeMsgEnum.getMessage(), data);
     }
+
+    /**
+     * 创建一个表示失败的响应对象
+     *
+     * @param rCodeMsgEnum 响应状态码和消息的枚举对象
+     * @param <T>          响应数据的类型
+     * @return 包含指定状态码和消息的失败响应对象
+     */
+    public static R<Void> error(Integer code, String message) {
+        return new R<>(code, message, null);
+    }
 }

@@ -11,7 +11,8 @@ public enum AuthenticationEnums implements RCodeMsgEnum {
     VERIFY_ERROR_OR_EXPIRED(401, "验证码错误或已过期"),
     SEND_VERIFY_CODE_SUCCESS(200, "验证码发送成功"),
     VERIFY_CODE_ERROR(400, "图片验证码错误"),
-    REQUEST_FREQUENT(429, "请求过于频繁，请60秒后再试");
+    REQUEST_FREQUENT(429, "请求过于频繁，请60秒后再试"),
+    PASSWORD_NOT_CONSISTENT(400, "密码不一致");
 
     private Integer code;
     private String message;
